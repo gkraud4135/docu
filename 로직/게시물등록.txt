@@ -1,0 +1,22 @@
+로직
+
+게시물등록준비 html폼	
+보냄		input name = "title"
+
+
+게시물등록.jsp			
+받음 		String 제목 = request.getParameter("title");
+임포트		<%@ page import="boardmanage.게시물" %>
+객체생성		게시물 새게시물 = new 게시물();
+set제목		새게시물.set제목(제목);
+
+게시물.java 	
+게시물.제목에 저장
+
+게시물등록.jsp
+db연결후
+get으로가져옴	String 삽입sql = "insert into 게시물(제목,내용) values('"+새게시물.get제목()+"','"+새게시물.get내용()+"')";
+
+
+if문추가하기위해
+게시물등록.jsp	
