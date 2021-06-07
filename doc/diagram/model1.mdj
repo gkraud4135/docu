@@ -13551,7 +13551,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFFxnI9/BN2hrc="
 					},
-					"name": "Classes",
+					"name": "mvc",
 					"ownedViews": [
 						{
 							"_type": "UMLNoteView",
