@@ -1,0 +1,84 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="java.util.*" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<c:set var="count" value="1" /> <% int count2 = 1; %>
+<c:out value="${count+1}" />    <%= count2+1 %>
+<c:remove var="count" />
+<c:out value = "${count}" />
+
+
+<!-- [JSTL IF문]{ -->
+   <c:set var="num" value="2" />
+   
+   <c:if test="${num > 1}">
+   
+   1보다 크다
+   
+   </c:if>
+
+<!-- if문 = c:if 끝나는곳을 /c:if로 닫아줘야함 }-->
+
+<!-- [JSTL IF ELSE 문]{ -->
+
+   <c:set var="count" value="1" />
+
+   <c:choose>
+   
+   <c:when test="${count == 0}">
+   
+   count는 <c:out value="${count}"></c:out>입니다.
+   
+   </c:when>
+   
+   <c:when test="${count > 1}">
+   
+   count는 <c:out value="${count}"></c:out>이고 1보다 큽니다.
+   
+   </c:when>
+   
+   <c:otherwise>
+   
+   count는<c:out value="${count}"></c:out>이고 는 1보다 작습니다
+   
+   </c:otherwise>
+   
+   </c:choose>
+
+<!-- choose : if else if else 문작성에 사용  }-->
+
+<!-- [JSTL FOR문] { -->
+
+   <c:forEach var="i" begin="1" end="8" step="1">
+   
+   <c:out value="${i}" /><br>
+   
+   </c:forEach>
+
+<!-- c:forEach : java에서 이용하는 기본적인 for문 } -->
+
+<!-- [JSTL FOR EACH문] {-->
+<%
+ArrayList<String> cityList = new ArrayList<String>();
+cityList.add("seoul");
+cityList.add("london");
+
+%>
+
+<c:forEach var="city"  items="${cityList}" varStatus="status" >
+           ${status.count}:${city}<br>
+</c:forEach>
+<!--  -->
+
+
+</body>
+
+</html>
