@@ -1,0 +1,13 @@
+-- -----------------------------------------------------
+-- Table `project`.`ip`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `project`.`ip` (
+  `sn` INT NOT NULL,
+  `ip` VARCHAR(45) NULL,
+  INDEX `fk_ip_member1_idx` (`sn` ASC),
+  CONSTRAINT `fk_ip_member1`
+    FOREIGN KEY (`sn`)
+    REFERENCES `project`.`member` (`sn`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
