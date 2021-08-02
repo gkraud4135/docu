@@ -1,0 +1,17 @@
+﻿
+Android 하려면
+
+1. JDK 다운받아 설치하고
+   환경변수 설정
+
+2. 안드로이드 다운 받아 설치 
+
+https://developer.android.com/studio
+
+https://developer.android.com/?hl=ko
+
+3. SDK install : ( 안드로이드 개발 툴)
+
+4. 애뮬레이터=가상기기=핸드폰대신 사용
+    AVD Manager아이콘 클릭
+
