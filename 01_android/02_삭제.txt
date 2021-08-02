@@ -1,0 +1,12 @@
+android studio 삭제
+
+c:\prgram files\Android\Android Studio\
+uninstall.exe 실행 하여 삭제 한다
+
+폴더 삭제
+
+c:\Users\user\AppData\Local\Android 삭제
+
+컴퓨터 재구동
+
+c:\Program Files\Android 삭제
