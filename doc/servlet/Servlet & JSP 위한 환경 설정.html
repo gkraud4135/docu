@@ -1,0 +1,610 @@
+
+<!-- saved from url=(0063)http://192.168.0.77:9000/myhome/servlet/02_servlet_context.html -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 11">
+<meta name="Originator" content="Microsoft Word 11">
+<link rel="File-List" href="http://192.168.0.77:9000/myhome/servlet/02_servlet_context.files/filelist.xml">
+<title>Servlet &amp; JSP 위한 환경 설정 </title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>a</o:Author>
+  <o:LastAuthor>a</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>0</o:TotalTime>
+  <o:Created>2015-09-23T05:43:00Z</o:Created>
+  <o:LastSaved>2015-09-23T05:43:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>250</o:Words>
+  <o:Characters>1430</o:Characters>
+  <o:Lines>11</o:Lines>
+  <o:Paragraphs>3</o:Paragraphs>
+  <o:CharactersWithSpaces>1677</o:CharactersWithSpaces>
+  <o:Version>11.5606</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DoNotHyphenateCaps/>
+  <w:PunctuationKerning/>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>6 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>3</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas>false</w:ValidateAgainstSchemas>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotUnderlineInvalidXML/>
+  <w:DoNotShadeFormData/>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:AdjustLineHeightInTable/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:바탕;
+	panose-1:2 3 6 0 0 1 1 1 1 1;
+	mso-font-alt:Batang;
+	mso-font-charset:129;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
+@font-face
+	{font-family:굴림;
+	panose-1:2 11 6 0 0 1 1 1 1 1;
+	mso-font-alt:Gulim;
+	mso-font-charset:129;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
+@font-face
+	{font-family:"\@굴림";
+	panose-1:2 11 6 0 0 1 1 1 1 1;
+	mso-font-charset:129;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
+@font-face
+	{font-family:"\@바탕";
+	panose-1:2 3 6 0 0 1 1 1 1 1;
+	mso-font-charset:129;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
+@font-face
+	{font-family:"맑은 고딕";
+	panose-1:2 11 5 3 2 0 0 2 0 4;
+	mso-font-charset:129;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1879047505 165117179 18 0 524289 0;}
+@font-face
+	{font-family:"\@맑은 고딕";
+	panose-1:2 11 5 3 2 0 0 2 0 4;
+	mso-font-charset:129;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1879047505 165117179 18 0 524289 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	text-autospace:none;
+	word-break:break-hangul;
+	font-size:10.0pt;
+	font-family:바탕;
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:바탕;
+	mso-font-kerning:1.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:42.55pt 1.0cm 3.0cm 3.0cm;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"표준 표";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang="KO" style="tab-interval:36.0pt;text-justify-trim:punctuation">
+
+<div class="Section1">
+
+<p class="MsoNormal" align="left" style="margin-bottom:10.0pt;text-align:left;
+line-height:115%;mso-layout-grid-align:none;word-break:keep-all"><b><span style="font-size:20.0pt;line-height:115%;font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;mso-font-kerning:0pt;mso-ansi-language:
+#0012">Servlet &amp; JSP 위한 환경 설정 </span></b><b><span style="font-family:&quot;맑은 고딕&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><b><span style="font-size:22.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO">서버 (Servlet ,JSP )</span></b><span style="font-size:
+11.0pt;font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+굴림;mso-font-kerning:0pt;mso-ansi-language:KO"> </span><b><span style="font-size:15.0pt;font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:KO">프로그램 하려면</span></b><b><span style="font-size:15.0pt;font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:11.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO">1. <b>JDK</b> 설치한다<span style="mso-spacerun:yes">&nbsp; </span></span><span style="font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO">( 환경변수 path=<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>classpath=<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>)<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="margin-bottom:10.0pt;text-align:left;
+line-height:115%;mso-layout-grid-align:none;word-break:keep-all"><span style="font-size:11.0pt;line-height:115%;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">2. <b>tomcat</b> 을 설치한다</span><span style="font-size:11.0pt;line-height:
+115%;font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:KO"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="margin-bottom:10.0pt;text-align:left;
+line-height:115%;mso-layout-grid-align:none;word-break:keep-all"><span style="font-size:11.0pt;line-height:115%;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:15.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;background:
+yellow;mso-highlight:yellow;mso-font-kerning:0pt;mso-ansi-language:KO">1.
+context.xml</span><span style="font-size:15.0pt;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><span style="mso-spacerun:yes">&nbsp; </span>(Jpadpro 읽어와서수정)<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:15.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO">C:\Tomcat 7.0\<span style="background:yellow;
+mso-highlight:yellow">conf</span> \<span style="background:yellow;mso-highlight:
+yellow">context.xml<o:p></o:p></span></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">=========================================================<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">&lt;!-- The contents of this file will be loaded for each web application
+--&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><b><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt">&lt;Context <span style="color:fuchsia">reloadable="true" privileged="true"</span>&gt;<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>&lt;!-- Default set of
+monitored resources --&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>&lt;WatchedResource&gt;WEB-INF/web.xml&lt;/WatchedResource&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>&lt;!-- Uncomment this to
+disable session persistence across Tomcat restarts --&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>&lt;!--<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>&lt;Manager
+pathname="" /&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>--&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>&lt;!-- Uncomment this to
+enable Comet connection tacking (provides events<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>on session expiration as well as webapp lifecycle) --&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>&lt;!--<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>&lt;Valve
+className="org.apache.catalina.valves.CometConnectionManagerValve"
+/&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>--&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt">&lt;/Context&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt">=========================================================<span style="mso-spacerun:yes">&nbsp; </span><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-size:20.0pt;font-family:
+굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt">C:\Tomcat 7.0\conf \ <b>server<span style="background:yellow;mso-highlight:
+yellow">.xml</span></b></span><span lang="EN-US" style="font-size:20.0pt;
+font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;background:yellow;mso-highlight:yellow;mso-font-kerning:0pt"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:20.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO">(Jpadpro 읽어와서수정)<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><b><span style="font-size:16.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;color:blue;
+mso-font-kerning:0pt;mso-ansi-language:KO">get</span></b><span style="font-size:16.0pt;font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:KO">방식에서 한글 처리하기
+위하여 </span><span style="font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><span style="mso-spacerun:yes">&nbsp;</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><span style="mso-spacerun:yes">&nbsp;</span><span style="background:yellow;
+mso-highlight:yellow">9000 검색</span></span><span style="font-family:&quot;맑은 고딕&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:KO"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:15.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO">&lt;Connector port="9000"
+protocol="HTTP/1.1" <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:15.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>connectionTimeout="20000" <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:15.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>redirectPort="8443" <b><span style="color:blue">URIEncoding="EUC-KR</span></b>"/&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">============================================================<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:16.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO">C:\Tomcat 6.0\<span style="background:yellow;
+mso-highlight:yellow">webapps</span></span><span style="font-size:16.0pt;
+font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:KO">\</span><span style="font-size:16.0pt;font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:굴림;background:yellow;mso-highlight:yellow;mso-font-kerning:
+0pt;mso-ansi-language:KO">ROOT</span><span style="font-size:16.0pt;font-family:
+굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:KO">\</span><span style="font-size:16.0pt;
+font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+굴림;background:yellow;mso-highlight:yellow;mso-font-kerning:0pt;mso-ansi-language:
+KO">WEB-INF</span><span style="font-size:16.0pt;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;text-indent:78.55pt;
+mso-char-indent-count:5.0;mso-layout-grid-align:none;word-break:keep-all"><b><span style="font-size:16.0pt;font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:굴림;background:yellow;mso-highlight:yellow;mso-font-kerning:
+0pt;mso-ansi-language:KO">classes</span></b><span style="font-size:16.0pt;
+font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+굴림;background:yellow;mso-highlight:yellow;mso-font-kerning:0pt;mso-ansi-language:
+KO"><span style="mso-spacerun:yes">&nbsp; </span></span><span style="font-size:
+16.0pt;font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+굴림;mso-font-kerning:0pt;mso-ansi-language:KO">폴더 만들고 =&gt;<span style="mso-spacerun:yes">&nbsp; </span>*.class</span><span style="font-size:
+16.0pt;font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:KO"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="margin-left:204.2pt;mso-para-margin-left:
+7.85gd;text-align:left;text-indent:-125.7pt;mso-char-indent-count:-8.0;
+mso-layout-grid-align:none;word-break:keep-all"><b><span style="font-size:16.0pt;
+font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+굴림;background:yellow;mso-highlight:yellow;mso-font-kerning:0pt;mso-ansi-language:
+KO">lib</span></b><span style="font-size:16.0pt;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><span style="mso-spacerun:yes">&nbsp; </span>폴더 만들고<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>=&gt;<span style="mso-spacerun:yes">&nbsp; </span>*.jar (mysql드라이버,오라클드라이버)</span><span style="font-size:16.0pt;font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:16.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;text-indent:80.0pt;
+mso-char-indent-count:5.0;mso-layout-grid-align:none;word-break:keep-all"><span style="font-size:16.0pt;font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:굴림;background:yellow;mso-highlight:yellow;mso-font-kerning:
+0pt;mso-ansi-language:KO">web.xml</span><span style="font-size:16.0pt;
+font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+굴림;mso-font-kerning:0pt;mso-ansi-language:KO"><span style="mso-spacerun:yes">&nbsp; </span>=&gt; 현재(this) 웹 어플리케이션 환경 정의<span style="mso-spacerun:yes">&nbsp; </span></span><span style="font-size:16.0pt;
+font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:KO"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:16.0pt;font-family:&quot;맑은 고딕&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:16.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO">===============================<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:16.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO">C:\Tomcat 7.0\<span style="background:yellow;
+mso-highlight:yellow">lib</span></span><span style="font-size:16.0pt;
+font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:KO">\</span><span style="font-size:16.0pt;font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:KO"> 에 있는 </span><span style="font-size:16.0pt;font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><b><span style="font-size:16.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;color:blue;
+mso-font-kerning:0pt;mso-ansi-language:KO">servlet-api.jar<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><b><span style="font-size:16.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;color:blue;
+mso-font-kerning:0pt;mso-ansi-language:KO">jsp-api.jar<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><b><span style="font-size:16.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;color:blue;
+mso-font-kerning:0pt;mso-ansi-language:KO">el-api.jar</span></b><b><span style="font-size:16.0pt;font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:굴림;color:#0070C0;mso-font-kerning:0pt;mso-ansi-language:
+KO"> </span></b><span style="font-size:16.0pt;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">를 </span><span style="font-size:16.0pt;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:16.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:16.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO">java 설치된 곳에 복사 </span><span style="font-size:16.0pt;
+font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:KO"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-size:16.0pt;font-family:
+굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt">( C:\Program Files\Java\ <span style="background:yellow;mso-highlight:
+yellow">jdk1.7</span> </span><span lang="EN-US" style="font-size:16.0pt;
+font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt">\</span><b><span lang="EN-US" style="font-size:16.0pt;font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:굴림;color:blue;background:yellow;mso-highlight:yellow;
+mso-font-kerning:0pt">jre</span></b><span lang="EN-US" style="font-size:16.0pt;
+font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt">\</span><b><span lang="EN-US" style="font-size:16.0pt;font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:굴림;color:blue;background:yellow;mso-highlight:yellow;
+mso-font-kerning:0pt">lib</span></b><span lang="EN-US" style="font-size:16.0pt;
+font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt">\</span><b><span lang="EN-US" style="font-size:16.0pt;font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:굴림;color:blue;background:yellow;mso-highlight:yellow;
+mso-font-kerning:0pt">ext</span></b><span lang="EN-US" style="font-size:16.0pt;
+font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+굴림;color:blue;mso-font-kerning:0pt"><span style="mso-spacerun:yes">&nbsp;
+</span></span><span lang="EN-US" style="font-size:16.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt">)<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-size:16.0pt;font-family:
+굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:16.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO">===================================</span><span style="font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:KO"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;background:yellow;
+mso-highlight:yellow;mso-font-kerning:0pt;mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="margin-bottom:10.0pt;text-align:left;
+line-height:115%;mso-layout-grid-align:none;word-break:keep-all"><b><span style="font-size:16.0pt;line-height:115%;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;color:blue;mso-font-kerning:0pt;
+mso-ansi-language:KO">Mysql 드라이버,오라클 드라이버</span></b><b><span style="font-size:
+16.0pt;line-height:115%;font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ansi-language:KO"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="margin-bottom:10.0pt;text-align:left;
+line-height:115%;mso-layout-grid-align:none;word-break:keep-all"><span lang="EN-US" style="font-size:16.0pt;line-height:115%;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt">C:\Program
+Files\Java\ <span style="background:yellow;mso-highlight:yellow">jdk1.7</span> </span><span lang="EN-US" style="font-size:16.0pt;line-height:115%;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">\</span><b><span lang="EN-US" style="font-size:16.0pt;line-height:115%;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;color:blue;background:yellow;
+mso-highlight:yellow;mso-font-kerning:0pt">jre</span></b><span lang="EN-US" style="font-size:16.0pt;line-height:115%;font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">\</span><b><span lang="EN-US" style="font-size:16.0pt;line-height:115%;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;color:blue;background:yellow;
+mso-highlight:yellow;mso-font-kerning:0pt">lib</span></b><span lang="EN-US" style="font-size:16.0pt;line-height:115%;font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt">\</span><b><span lang="EN-US" style="font-size:16.0pt;line-height:115%;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;color:blue;background:yellow;
+mso-highlight:yellow;mso-font-kerning:0pt">ext</span></b><b><span lang="EN-US" style="font-size:16.0pt;line-height:115%;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;color:blue;mso-font-kerning:0pt"> <span style="mso-spacerun:yes">&nbsp;</span><span style="mso-spacerun:yes">&nbsp;</span></span></b><b><span style="font-size:
+16.0pt;line-height:115%;font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:굴림;color:blue;mso-font-kerning:0pt">여기에 복사</span></b><b><span lang="EN-US" style="font-size:16.0pt;line-height:115%;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:
+0pt"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="margin-bottom:10.0pt;text-align:left;
+line-height:115%;mso-layout-grid-align:none;word-break:keep-all"><span style="font-size:16.0pt;line-height:115%;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">C:\Tomcat 7.0\<span style="background:yellow;mso-highlight:yellow">lib</span></span><span style="font-size:16.0pt;line-height:115%;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO">\</span><span style="font-size:16.0pt;line-height:115%;
+font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+굴림;mso-font-kerning:0pt;mso-ansi-language:KO"> <span style="mso-spacerun:yes">&nbsp;</span><b><span style="color:blue">여기에 복사</span></b>
+</span><span lang="EN-US" style="font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:16.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO">===============================<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="margin-bottom:10.0pt;text-align:left;
+line-height:115%;mso-layout-grid-align:none;word-break:keep-all"><span style="font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+
+
+
+</body></html>

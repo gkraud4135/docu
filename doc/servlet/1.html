@@ -1,0 +1,742 @@
+
+<!-- saved from url=(0057)http://192.168.0.77:9000/myhome/servlet/06_lifeCycle.html -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 11">
+<meta name="Originator" content="Microsoft Word 11">
+<link rel="File-List" href="http://192.168.0.77:9000/myhome/servlet/06_lifeCycle.files/filelist.xml">
+<link rel="Edit-Time-Data" href="http://192.168.0.77:9000/myhome/servlet/06_lifeCycle.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>1</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>a</o:Author>
+  <o:LastAuthor>a</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>0</o:TotalTime>
+  <o:Created>2015-09-23T05:51:00Z</o:Created>
+  <o:LastSaved>2015-09-23T05:51:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>310</o:Words>
+  <o:Characters>1773</o:Characters>
+  <o:Lines>14</o:Lines>
+  <o:Paragraphs>4</o:Paragraphs>
+  <o:CharactersWithSpaces>2079</o:CharactersWithSpaces>
+  <o:Version>11.5606</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DoNotHyphenateCaps/>
+  <w:PunctuationKerning/>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>6 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>3</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas>false</w:ValidateAgainstSchemas>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotUnderlineInvalidXML/>
+  <w:DoNotShadeFormData/>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:AdjustLineHeightInTable/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:바탕;
+	panose-1:2 3 6 0 0 1 1 1 1 1;
+	mso-font-alt:Batang;
+	mso-font-charset:129;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
+@font-face
+	{font-family:"\@바탕";
+	panose-1:2 3 6 0 0 1 1 1 1 1;
+	mso-font-charset:129;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
+@font-face
+	{font-family:"맑은 고딕";
+	panose-1:2 11 5 3 2 0 0 2 0 4;
+	mso-font-charset:129;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1879047505 165117179 18 0 524289 0;}
+@font-face
+	{font-family:"\@맑은 고딕";
+	panose-1:2 11 5 3 2 0 0 2 0 4;
+	mso-font-charset:129;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1879047505 165117179 18 0 524289 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	text-autospace:none;
+	word-break:break-hangul;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:바탕;
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:99.25pt 3.0cm 3.0cm 3.0cm;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"표준 표";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang="KO" style="tab-interval:36.0pt;text-justify-trim:punctuation">
+
+<div class="Section1">
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">1. 서블릿 이란?<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">멀티 쓰레딩에 의해 사용자 요구를 처리하고 가공 하여 결과를
+클라이언트 내보낸다.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">JSP는 페이지의 요청이 있을 시에 최초에 1번 자바코드로 변환된
+후 서블릿 클래스로 컴파일 된다.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">즉, 실행시 JSP는 서블릿으로 변환된다.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">서블릿과 JSP는 상호 연계되어 JSP에서 정적인 부분을 담당(사용자
+뷰(view),<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">서블릿은 보다 동적인 처리를 위한 부분으로 사용(사용자 뷰와
+프로그램 로직 사이클을 제어해 주는 역할).<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">2.HTTP프로토콜 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">1) HTTP프로토콜 : 비연결과 비상태의 특징을 갖는 프로토콜<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">웹 브라우져는 HTTP프로토콜에 맞게 요청(request)을
+웹서버에 전송하고,<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">웹 서버는 요청에 따른 응답(reply)을 HTTP프로토콜에
+맞게 웹 브라우저에 전송한다.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><span style="mso-spacerun:yes">&nbsp;</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">(1) 비연결(Connectionless) :클라이언트의 요청에
+응답한 후 바로 연결 끊음<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">(2) 비 상태(Stateless) : 서버의 상태가 어떤지
+간에 상관없이 요청을 함.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">HTTP메소드는 여러가지가 있으나 거의 99.9% get과
+post만 쓰임.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">메소드 타입을 명시하지 않으면 디폴트는 get이다.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">(1) Get : <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">- HTTP header에 정보를 실어 보냄.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">- Start-line의 URL뒤에 붙는다.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">-<span style="mso-spacerun:yes">&nbsp; </span>적은양의 데이터 전송에 좋고 전달 속도 빠르지만 256byte가 한게이다.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">(2) Post : <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">- HTTP의<span style="mso-spacerun:yes">&nbsp; </span>body에 정보를 실어보냄.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">- 데이터 사이즈에 제한이 없다.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><span style="mso-spacerun:yes">&nbsp;</span>- 보안에 좋다.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">3.서블릿 동작원리<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">서블릿은 javax.servlet패키지와
+javax.servlet.http의 클래스와 인터페이스를 이용해서 만든다.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">1) 서블릿의 종류<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><b><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">(1)Generic서블릿 :<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:6in;
+ height:121.8pt'>
+ <v:imagedata src="06_lifeCycle.files/image001.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img width="576" height="162" src="./1_files/image002.jpg" v:shapes="_x0000_i1025"><!--[endif]--><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><span style="mso-spacerun:yes">&nbsp;</span>javax.servlet패키지는 프로토콜에 독립적인 서블릿을 만들기 위한 클래스를
+제공한다.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><span style="mso-spacerun:yes">&nbsp;</span>- 프로토콜에 독립적인 서블릿을 만들려면 Generic서블릿을 상속<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><span style="mso-spacerun:yes">&nbsp;</span>- Generic서블릿은 요청을 처리하기 위해 자신의 service()메소드를
+오버라이드해야한다.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><span style="mso-spacerun:yes">&nbsp;</span>- request(요청), response(응답)에 대한 접근을 제공<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><b><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">(2)Http서블릿<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><!--[if gte vml 1]><v:shape id="_x0000_i1026"
+ type="#_x0000_t75" style='width:6in;height:109.2pt'>
+ <v:imagedata src="06_lifeCycle.files/image003.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img width="576" height="146" src="./1_files/image004.jpg" v:shapes="_x0000_i1026"><!--[endif]--><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">javax.seervlet.http패키지는 HTTP프로토콜의
+고유한 기능(get, post)를 제공하는 서블릿을 만드는 클래스를 제공한다.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">- doGet()메소드(Get요청시), doPost()메소드(post요청시)을
+오버로드 한다.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">- HttpServletRequest,
+HttpServletResponse는 HTTP<b>요청</b>과 <b>응답</b>에 대한 기능을 제공 한다.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><b><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">2) 서블릿 요청과 응답의 과정<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">(1) Invokoer를 실행한다. (Thread를 만든다.(작업용
+request당 1개))<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">(2) 생성된 Thread에서 service메소드(response(응답)내용
+담김) 을 호출. <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(이는 쓰레드의 run메소드와 유사하다. )<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">(5) 결과를 클라이언트에게 전달한다. 이때 결과를 mime
+type으로 보내는데 웹 프라우저의 mime type은 text/html이다<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">Container는<span style="mso-spacerun:yes">&nbsp; </span>tomcat, resine등은 웹 컨테이너이다..<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">3) 서블릿의 요청과 응답의 과정에서 컨테이너가 하는 일.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>(1) 객체가 있는지 유무 판단, 없으면 생성<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>(2) Thread생성<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>(3) service()호출<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>(4) service() (HttpServlet class의 메소드)가<span style="mso-spacerun:yes">&nbsp; </span>doGet()자동 호출<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">4. 서블릿 라이프 사이클<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><!--[if gte vml 1]><v:shape id="_x0000_i1027"
+ type="#_x0000_t75" style='width:6in;height:369.6pt'>
+ <v:imagedata src="06_lifeCycle.files/image005.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img width="576" height="493" src="./1_files/image006.jpg" v:shapes="_x0000_i1027"><!--[endif]--><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">(1) 서블릿 태어남..(서블릿 <b><span style="color:#004DBB">로드</span></b>됨)<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">(2) init() : 자격부여 (서블릿을 서비스 하기 위해
+필요한 초기화 작업 수행)<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>service()메소드 호출<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">(3) service(): request당 1개씩 호출.
+reload도 해당.<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012">(4) destroy : 더 이상 서비스 하지 않을 경우에 서블릿
+엔진에 의해 메모리에서 언로드 된다. 이때 destroy()메소드 실행<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>destory()메소드는 아래와 같은 3가지 경우에
+1번만 호출<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>- container가 종료될때, <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>- timeout이 되었을때, <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>- class의 내용이 변경되었을때(재 컴파일시)될때
+<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="mso-bidi-font-size:10.0pt;font-family:
+&quot;맑은 고딕&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;맑은 고딕&quot;;
+mso-font-kerning:0pt;mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+
+
+
+</body></html>

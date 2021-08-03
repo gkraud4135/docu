@@ -1,0 +1,749 @@
+
+<!-- saved from url=(0057)http://192.168.0.77:9000/myhome/servlet/05_lifeCycle.html -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 11">
+<meta name="Originator" content="Microsoft Word 11">
+<link rel="File-List" href="http://192.168.0.77:9000/myhome/servlet/05_lifeCycle.files/filelist.xml">
+<link rel="Edit-Time-Data" href="http://192.168.0.77:9000/myhome/servlet/05_lifeCycle.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Target 문서 : 서버 측에서 처리한 결과를 팝업 창으로 보여주는 방법 </title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>a</o:Author>
+  <o:LastAuthor>a</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>62</o:TotalTime>
+  <o:Created>2015-09-23T05:49:00Z</o:Created>
+  <o:LastSaved>2015-09-23T05:49:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>189</o:Words>
+  <o:Characters>1081</o:Characters>
+  <o:Lines>9</o:Lines>
+  <o:Paragraphs>2</o:Paragraphs>
+  <o:CharactersWithSpaces>1268</o:CharactersWithSpaces>
+  <o:Version>11.5606</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DoNotHyphenateCaps/>
+  <w:PunctuationKerning/>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>6 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>3</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas>false</w:ValidateAgainstSchemas>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotUnderlineInvalidXML/>
+  <w:DoNotShadeFormData/>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:AdjustLineHeightInTable/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:바탕;
+	panose-1:2 3 6 0 0 1 1 1 1 1;
+	mso-font-alt:Batang;
+	mso-font-charset:129;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
+@font-face
+	{font-family:굴림;
+	panose-1:2 11 6 0 0 1 1 1 1 1;
+	mso-font-alt:Gulim;
+	mso-font-charset:129;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
+@font-face
+	{font-family:"\@굴림";
+	panose-1:2 11 6 0 0 1 1 1 1 1;
+	mso-font-charset:129;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
+@font-face
+	{font-family:"\@바탕";
+	panose-1:2 3 6 0 0 1 1 1 1 1;
+	mso-font-charset:129;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
+@font-face
+	{font-family:"맑은 고딕";
+	panose-1:2 11 5 3 2 0 0 2 0 4;
+	mso-font-charset:129;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1879047505 165117179 18 0 524289 0;}
+@font-face
+	{font-family:"\@맑은 고딕";
+	panose-1:2 11 5 3 2 0 0 2 0 4;
+	mso-font-charset:129;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1879047505 165117179 18 0 524289 0;}
+@font-face
+	{font-family:994268_10;
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:3 0 0 0 1 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	text-autospace:none;
+	word-break:break-hangul;
+	font-size:10.0pt;
+	font-family:바탕;
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:바탕;
+	mso-font-kerning:1.0pt;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:굴림;
+	mso-bidi-font-family:굴림;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:99.25pt 3.0cm 3.0cm 3.0cm;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"표준 표";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang="KO" style="tab-interval:36.0pt;text-justify-trim:punctuation">
+
+<div class="Section1">
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:20.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO">Target 문서</span><span style="font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO"> : 서버 측에서 처리한 결과를 팝업 창으로 보여주는 방법 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">&lt;script&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">function aa() <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">{<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>open('새로 열게될 주소','문서이름','width=300
+height=300')<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">}<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">&lt;/script&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">&lt;form method="get/post"<span style="mso-spacerun:yes">&nbsp;
+</span>action="서버주소" encType=""<span style="mso-spacerun:yes">&nbsp; </span>target="문서이름"&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">encType="인코딩 타입을 기술"<span style="mso-spacerun:yes">&nbsp;
+</span>=&gt; 메일 보내기 / 파일 업로드 할때 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">target="문서이름" ==&gt; 서버프로그램 처리후 결과를 보여줄 프레임이나 창 이름이다 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">Target.html<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">Target.java<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">=============================<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:20.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO">서블릿 생명 주기 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">=============================<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">처음에 서블릿이 메모리에 Load 될때 init() 메서드가 호출된다 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">init() 메서드에서는 서블릿이 서비스하기 위해 필요한 초기화 작업을 수행한다 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">초기화된 서블릿은 클라이언트 요청이 있을때마다 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">스레드가 생성되어 병행적으로 service()메서드를 수행한다 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">doGet() doPost()메서드는 클라이언트 요청이 있을때마다 service()메서드가 호출되어서 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">service()메서드가 HTTP 의 method 타입에 따라 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">get 방식인 경우는 doGet()메서드를 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">posr방식인 경우는 doPosr() 메서드를 호출한다 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">서블릿을 더이상 서비스 하지 않을경우에</span><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">서블릿 엔진에 의해 메모리에서 unLoad 된다 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">이때 메모리에서 unLoad되기 직전에 destory() 메서드가 수행된다 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">서블릿의 destroy() 메서드는 서블릿의 엔진 환경에 따라 어느때든지 호출 될 수 있다 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">init()과 destroy() 메서드는 한번씩만 수행되 병행적으로 수행 되지는 않는다 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt">init()
+=====&gt;service() =====&gt;destroy()<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>doGet()<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>doPost()<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:#0012"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:6in;
+ height:369.6pt'>
+ <v:imagedata src="05_lifeCycle.files/image001.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img width="576" height="493" src="./Target 문서 _ 서버 측에서 처리한 결과를 팝업 창으로 보여주는 방법_files/image002.jpg" v:shapes="_x0000_i1025"><!--[endif]--><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><b><span style="font-size:12.0pt;font-family:굴림;
+mso-ascii-font-family:994268_10;mso-hansi-font-family:994268_10;mso-bidi-font-family:
+굴림;mso-font-kerning:0pt">●</span></b><b><span style="font-size:12.0pt;
+font-family:994268_10;mso-fareast-font-family:굴림;mso-bidi-font-family:994268_10;
+mso-font-kerning:0pt"> </span></b><b><span style="font-size:12.0pt;font-family:
+굴림;mso-ascii-font-family:994268_10;mso-hansi-font-family:994268_10;mso-bidi-font-family:
+굴림;mso-font-kerning:0pt">메모리에</span></b><b><span style="font-size:12.0pt;
+font-family:994268_10;mso-fareast-font-family:굴림;mso-bidi-font-family:994268_10;
+mso-font-kerning:0pt"> </span></b><b><span style="font-size:12.0pt;font-family:
+굴림;mso-ascii-font-family:994268_10;mso-hansi-font-family:994268_10;mso-bidi-font-family:
+굴림;mso-font-kerning:0pt">올라가는</span></b><b><span style="font-size:12.0pt;
+font-family:994268_10;mso-fareast-font-family:굴림;mso-bidi-font-family:994268_10;
+mso-font-kerning:0pt"> </span></b><b><span style="font-size:12.0pt;font-family:
+굴림;mso-ascii-font-family:994268_10;mso-hansi-font-family:994268_10;mso-bidi-font-family:
+굴림;mso-font-kerning:0pt">방법</span></b><b><span lang="EN-US" style="font-size:
+12.0pt;font-family:994268_10;mso-fareast-font-family:굴림;mso-bidi-font-family:
+994268_10;mso-font-kerning:0pt">, </span></b><b><span style="font-size:12.0pt;
+font-family:굴림;mso-ascii-font-family:994268_10;mso-hansi-font-family:994268_10;
+mso-bidi-font-family:굴림;mso-font-kerning:0pt">시점은</span></b><b><span lang="EN-US" style="font-size:12.0pt;font-family:994268_10;mso-fareast-font-family:
+굴림;mso-bidi-font-family:994268_10;mso-font-kerning:0pt">?<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><b><span lang="EN-US" style="font-size:12.0pt;
+font-family:994268_10;mso-fareast-font-family:굴림;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><b><span lang="EN-US" style="font-size:12.0pt;
+font-family:994268_10;mso-fareast-font-family:굴림;mso-bidi-font-family:994268_10;
+mso-font-kerning:0pt"><span style="mso-spacerun:yes">&nbsp; </span></span></b><b><span style="font-size:12.0pt;font-family:굴림;mso-ascii-font-family:994268_10;
+mso-hansi-font-family:994268_10;mso-bidi-font-family:굴림;mso-font-kerning:0pt">최초의</span></b><b><span style="font-size:12.0pt;font-family:994268_10;mso-fareast-font-family:굴림;
+mso-bidi-font-family:994268_10;mso-font-kerning:0pt"> </span></b><b><span style="font-size:12.0pt;font-family:굴림;mso-ascii-font-family:994268_10;
+mso-hansi-font-family:994268_10;mso-bidi-font-family:굴림;mso-font-kerning:0pt">브라우저</span></b><b><span style="font-size:12.0pt;font-family:994268_10;mso-fareast-font-family:굴림;
+mso-bidi-font-family:994268_10;mso-font-kerning:0pt"> </span></b><b><span style="font-size:12.0pt;font-family:굴림;mso-ascii-font-family:994268_10;
+mso-hansi-font-family:994268_10;mso-bidi-font-family:굴림;mso-font-kerning:0pt">접속에</span></b><b><span style="font-size:12.0pt;font-family:994268_10;mso-fareast-font-family:굴림;
+mso-bidi-font-family:994268_10;mso-font-kerning:0pt"> </span></b><b><span style="font-size:12.0pt;font-family:굴림;mso-ascii-font-family:994268_10;
+mso-hansi-font-family:994268_10;mso-bidi-font-family:굴림;mso-font-kerning:0pt">의해</span></b><b><span style="font-size:12.0pt;font-family:994268_10;mso-fareast-font-family:굴림;
+mso-bidi-font-family:994268_10;mso-font-kerning:0pt"> </span></b><b><span style="font-size:12.0pt;font-family:굴림;mso-ascii-font-family:994268_10;
+mso-hansi-font-family:994268_10;mso-bidi-font-family:굴림;mso-font-kerning:0pt">인스턴스가</span></b><b><span style="font-size:12.0pt;font-family:994268_10;mso-fareast-font-family:굴림;
+mso-bidi-font-family:994268_10;mso-font-kerning:0pt"> </span></b><b><span style="font-size:12.0pt;font-family:굴림;mso-ascii-font-family:994268_10;
+mso-hansi-font-family:994268_10;mso-bidi-font-family:굴림;mso-font-kerning:0pt">메모리에</span></b><b><span style="font-size:12.0pt;font-family:994268_10;mso-fareast-font-family:굴림;
+mso-bidi-font-family:994268_10;mso-font-kerning:0pt"> </span></b><b><span style="font-size:12.0pt;font-family:굴림;mso-ascii-font-family:994268_10;
+mso-hansi-font-family:994268_10;mso-bidi-font-family:굴림;mso-font-kerning:0pt">올라감</span></b><b><span lang="EN-US" style="font-size:12.0pt;font-family:994268_10;mso-fareast-font-family:
+굴림;mso-bidi-font-family:994268_10;mso-font-kerning:0pt">.<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><b><span lang="EN-US" style="font-size:12.0pt;
+font-family:994268_10;mso-fareast-font-family:굴림;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span lang="EN-US" style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO"><!--[if gte vml 1]><v:shape id="_x0000_i1026" type="#_x0000_t75"
+ style='width:535.2pt;height:240pt'>
+ <v:imagedata src="05_lifeCycle.files/image003.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img width="714" height="320" src="./Target 문서 _ 서버 측에서 처리한 결과를 팝업 창으로 보여주는 방법_files/image004.jpg" v:shapes="_x0000_i1026"><!--[endif]--><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-ascii-font-family:994268_10;mso-hansi-font-family:994268_10;mso-bidi-font-family:
+굴림;mso-font-kerning:0pt">●</span><span style="font-size:12.0pt;font-family:
+994268_10;mso-fareast-font-family:굴림;mso-bidi-font-family:994268_10;mso-font-kerning:
+0pt"> </span><span style="font-size:12.0pt;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:0pt;mso-ansi-language:
+KO">서블릿 가족관계도</span><span style="font-size:12.0pt;font-family:굴림;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:KO"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><b><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;color:blue;
+mso-font-kerning:0pt;mso-ansi-language:KO">1. Servlet : (할아버지)<span style="mso-spacerun:yes">&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>Init() 태어나고(한번 호출)<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>Service() 일하고 (계속작동)<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>Destroy() 죽고(한번호출)</span><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:KO"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><b><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;color:blue;
+mso-font-kerning:0pt;mso-ansi-language:KO">2. GenericServlet (아빠)<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><b><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:blue;mso-font-kerning:0pt;mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><b><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;color:blue;
+mso-font-kerning:0pt;mso-ansi-language:KO">3. HttpServlet (아들) : <o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>doXXX메소드 <o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>doGet()<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:굴림;mso-font-kerning:
+0pt;mso-ansi-language:KO"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>doPost()</span><span style="font-size:12.0pt;font-family:굴림;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;mso-ansi-language:
+KO"><o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-family:&quot;맑은 고딕&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:0pt;
+mso-ansi-language:#0012"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-align:left;mso-layout-grid-align:
+none;word-break:keep-all"><span style="font-size:12.0pt;font-family:굴림;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;mso-ansi-language:KO"><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+
+
+
+</body></html>
