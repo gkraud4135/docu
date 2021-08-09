@@ -1,0 +1,57 @@
+Unable to connect to the MKS: Too many socket connect attempts; giving up.
+
+VMWare Workstation 대표적인 2가지 오류 해결
+
+이는 최근 14.x 버전 대에서 더 자주 발생하는 듯 하다.
+
+
+
+
+
+첫번째 오류.
+
+Unable to open kernel device "\\.\Global\vmx86": The system cannot find the file
+
+
+
+vmx 86 서비스를 실행해준다.
+
+
+
+cmd 명령창에서 'net start vmx86' 을 입력하면 된다.
+
+
+
+
+
+두번째 오류.
+
+"Unable to connect to the MKS: Too many socket connect attempts; giving up".
+
+
+
+cmd 창에서 아래 명령어로 작동하지 않는 서비스를 체크한다.
+
+sc query vmx86
+
+sc query hcmon
+
+sc query VMauthdService
+
+
+
+이후 STATE 항목에 RUNNING 상태로 돌아가지 않는 서비스를 실행해주어야 한다.
+
+
+
+실행 방법은 첫번째 오류 해결과 마찬가지로
+
+
+
+net start hcmon 또는 net start VMauthdService
+
+를 입력해준다.
+
+
+
+출처: https://whackur.tistory.com/115 [Whackur's Blog]
