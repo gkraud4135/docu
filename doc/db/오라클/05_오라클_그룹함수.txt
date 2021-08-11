@@ -1,0 +1,113 @@
+05_오라클_그룹함수.txt
+
+그룹함수 
+
+count : 행 갯수 구하기 ( 행 갯수를 count할때 사용)  ★★★★★
+
+sum : 해당 열의  총 합계를 구한다 
+avg :  해당 열의  총 평균를 구한다 
+max : 해당 열의  최대값르 구한다 
+min :  해당 열의  최소값을 구한다 
+
+select ename,sal
+from emp;
+
+문1) 행 갯수 구하기 
+select count(*)
+from emp;
+
+문2) 행 갯수 구하기 잘 못된 예)
+select count(*),ename
+from emp;
+-----------------------------------------------------
+
+문3) 30번 부서에서 커미션을 받는 사람 수를 구하시요.
+
+select count(comm)
+from emp
+where deptno=30;
+-----------------------------------------------------
+
+문4) 전체에서 커미션을 받는 사람수를 구하시요.
+
+select count(comm)
+from emp;
+
+select count(comm)
+from emp
+where comm>0;
+
+------------------------------------------------------
+문5) 10번부서의  인원수를 구하시요
+
+select count(*)
+from emp
+where deptno=10;
+
+select count(ename)
+from emp
+where deptno=10;
+------------------------------------------------------
+문6) 중복을 제거하고 job을 count 하시요
+
+select count(distinct job)
+from emp;
+
+select distinct job
+from emp;
+
+select count(job)
+from emp;
+------------------------------------------------------
+
+문7) 급여의 합을 구하시요.
+
+select sum(sal)
+from emp;
+
+문8) 급여의 평균을 구하시요.
+
+select avg(sal)
+from emp;
+
+문9)급여의 합과 평균을 구하시오.
+
+select sum(sal) as 급여합, avg(sal) as 급여평균
+from emp;
+---------------------------------------------
+문10) 최대급여와 최소급여를 구하시요
+
+select max(sal) 최대급여, min(sal) 최소급여
+from emp;
+
+=========================
+■ group by절
+=========================
+그룹함수 사용 
+문 9) 부서별로 가장 높은 급여 구하기 
+
+select max(sal), deptno
+from emp
+group by deptno;
+
+문10) 부서별로 평균 급여 구하기 
+
+select avg(sal), deptno
+from emp
+group by deptno;
+
+=========================
+■ having 절
+=========================
+having 절은 group by 절에 의해 생성된 결과중에서
+조건을 사용할 때 having절을 사용한다 
+
+문11) 부서별 급여 평균이 2000 이상인 자료만 산출하되, 
+      deptno,평균을 출력 하시오.
+
+select deptno,avg(sal)
+from emp
+group by deptno
+having avg(sal)>=2000;
+
+

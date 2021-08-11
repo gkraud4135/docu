@@ -1,0 +1,192 @@
+04_오라클_문자처리함수.txt
+
+문자처리 함수
+
+upper : 대문자로 변환
+lower : 소문자로 변환 
+
+initcap : 첫글자만 대문자 ( 이니셜만 대문자로)
+
+trim : 공백제거
+ltrim : 왼쪽공백 제거 
+rtrim : 오른쪽 공백 제거
+
+substr : 문자열 일부 추출 
+참고> 자바는 substring()
+-------------------------------------
+문1) ename을 소문자로 출력 하되,
+     ename,empno출력하시오.
+
+select lower(ename),empno
+from emp;
+-------------------------------------
+문2) ename을 첫글자 대문자로 출력하되,
+     ename, sal 출력 하시오.
+
+select initcap(ename) ,sal
+from emp;
+
+-------------------------------------
+■문자열 일부분을 추출하는 substr 함수
+
+문3) 년도만 추출하되,
+       ename, hiredate, 년도만 출력 하시오.
+
+select ename,hiredate,substr(hiredate,1,2) as 년도
+from emp;
+
+---------------------------------------------
+문4) 월(달)만 추출하시요
+
+select ename,hiredate,substr(hiredate,4,2) as 월
+from emp;
+
+substr(hiredate,위치,글 갯수)
+
+---------------------------------------------
+문5)ename에서 3번째 한문자를 추출하여 R인 자료를 추출하되,
+    ename 출력하시오.
+
+select ename
+from emp
+where substr(ename,3,1)='R';
+
+---------------------------------------------
+★  중요
+
+문6) 82년도에 입사한 사원만 추출하되,
+     ename,hiredate 출력 하시오.
+
+select ename,hiredate
+from emp
+where substr(hiredate,1,2)=82;
+
+==============================
+자바에서
+==============================
+문자열을 숫자로 변환  : Integer.parseInt("123")
+숫자를 문자열로 변환 : 21+""
+날짜를 문자열로 변환 : date.toString();
+StringBuffer sb 를 문자열로 변환 : sb.toString()
+
+==============================
+오라클에서
+==============================
+number   --------> Character ( 숫자를 문자로 변환)
+            to_char
+
+number   <-------- Character ( 문자를 숫자로 변환)
+            to_number
+
+
+
+date   --------------->Chracter(날짜를 문자로 변환)
+            to_char
+
+
+date  <--------------- Chracter(문자를 날짜로 변환)
+            to_date
+
+===========================
+날짜 출력 형식 
+===========================
+YYYY : 년도 4자리 
+YY : 년도 2 자리 
+
+MM : 월을 숫자로 표현 
+MON : 월을 알파벳(문자열)으로 표현 
+
+dd : 날짜를 2자리로 표시 
+
+===========================
+시간 출력 형식 
+===========================
+AM/PM : 오전/오후
+HH / HH12 : 12 시간제 
+HH24 : 24시간제 
+MI : 분 
+SS : 초 
+
+문7) hiredate를 YYYY-MM-dd 로 출력 하시오
+
+select hiredate , to_char(hiredate,'YYYY-MM-dd')
+from emp;
+
+select hiredate , to_char(hiredate,'YYYY/MM/dd')
+from emp;
+
+select hiredate , to_char(hiredate,'YYYY/MM/dd HH24:MI:SS')
+from emp;
+------------------요일표기
+select hiredate ,to_char(hiredate,'YYYY/MM/dd DAY')
+from emp;
+
+select hiredate ,to_char(hiredate,'YYYY/MM/dd DY')
+from emp;
+
+//MON  : 12월
+select hiredate ,to_char(hiredate,'YYYY/MON/dd DY')
+from emp;
+
+select hiredate ,to_char(hiredate,'YYYY/MON/dd AM')
+from emp;
+
+select hiredate ,to_char(hiredate,'YYYY/MON/dd PM')
+from emp;
+------------------
+■ 통화기호 표시
+
+문8) emp테이블의 sal를 6자리로하고, $붙이되,
+       ename,sal만 출력 하시오.
+
+select ename,sal,to_char(sal,'$999,999')
+from emp;
+-------------------------------------------------
+
+문9)지역 통화기호 붙여서 sal을 출력하시요.
+    L => Local (나라별) : 제어판에 설정된 나라별이다.
+
+select ename,to_char(sal,'L999,999')
+from emp;
+--------------------------------------------------
+
+■날짜를 문자로 
+오라클래서 시스템 날짜 구하는 명령 : sysdate
+dual : 가상 테이블
+
+문)시스템 날짜를 구하여 문자로 출력 하시오.
+
+select to_char(sysdate)
+from dual;
+
+select to_char(sysdate,'YYYY-MM-dd')
+from dual;
+
+select to_char(sysdate,'YYYY-MM-dd HH:mi:ss')
+from dual;
+     
+select to_char(sysdate,'MONTH'), to_char(sysdate,'MON')
+from dual;
+
+
+■문자를 날짜로 
+
+select to_date('2020-05-20','YYYY/mm/dd')
+from dual;
+
+======================
+null 변환 함수 NVL ( null value)
+======================
+
+커미션이 null 인 경우 0으로 변경하여 계산에 참여하여 
+제대로 계산된다
+
+잘못된 예)
+select ename,sal,comm,sal*12+comm as 연봉
+from emp;
+
+옳은예)  NVL(null value)를 사용하여 null인 경우 0으로
+            처리하여 연산하게 한다 
+
+select ename,sal,comm,sal*12+NVL(comm,0) as 연봉
+from emp;

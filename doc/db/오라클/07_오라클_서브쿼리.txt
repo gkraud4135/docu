@@ -1,0 +1,62 @@
+07_오라클_서브쿼리.txt
+=====================
+서브쿼리
+=====================
+하나 이상의 테이블에서 원하는 데이터를 찾기 위해서
+join을 사용했다면,
+
+서브 쿼리는 하나의 테이블에서
+검색한 결과를 가지고 , 또 다른 검색을 할때 사용 한다 
+================================
+
+문1) JONES이 근무하는 부서와 일치하는 dept테이블의 부서명을 출력하시요.
+
+select dname
+from dept
+where deptno=(select deptno from emp where ename='JONES');
+                        서브쿼리
+
+------------------------------------------------------------
+문2) 10번 부서에서 근무하는 자료를 검색하되,
+     emp 테이블과 
+     dept 테이블에서 부서가 10인 자료를 서브쿼리를 사용하되  
+     emp의 deptno와 dept의 deptno 일치한 자료를 검색하여 
+ 
+    ename, dname,deptno를 출력하시오.
+
+select e.ename , d.dname, d.deptno
+from emp e, (select deptno,dname from dept where deptno=10) d
+where e.deptno=d.deptno;
+
+-------------------------------------------------------------
+문3) 20번 부서에서 최대 급여를 받은 사람과
+     동일한 급여을 받은 사원을 검색하여
+     empno,ename,sal,deptno 항목을 출력하시오.
+
+select empno,ename,sal,deptno
+from emp
+where sal=(select max(sal) from emp where deptno=20);
+
+-------------------------------------------------------------
+■ 게시판 예제 
+select * from
+(select 필드명,필드명,,,,, from(select * from 테이블명))
+where rnum>11 and rnum<=20;
+---------------------------------------
+rownum : 오라클에서 삭제된 데이터를 제외하고 행번호를 매겨준다
+
+select rownum from emp;
+
+
+■ 게시판 예제 
+select * from
+(select rownum rnum,num,writer,,,,, from(select * from board order by num desc))
+where rnum>11 and rnum<=20;
+
+데이터 11부터 20까지만 DB의 테이블로부터 가져오려는 쿼리이다
+
+■ MySQL
+  select * from board order by num limit 0,10;
+                                                           시작위치,갯수
+
+

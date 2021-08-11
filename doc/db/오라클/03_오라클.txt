@@ -1,0 +1,189 @@
+03_오라클.txt
+
+select * from tab;
+dept / emp / BONUS/ SALGRADE ( 오라클사에서 제공한 자료)
+
+필드=칼럼
+행=row=record
+
+필드명=칼럼명 : 자바 변수하고 매칭 시켜 사용한다 
+
+테이블 구조 보기
+desc 테이블이름;
+desc dept;
+
+
+문1) emp테이블에서 특정 데이터 사원번호,사원이름을 출력하시요.
+
+select empno,ename
+from emp;
+
+문2) emp테이블에서 특정 데이터 사원이름, 급여, 입사일을 출력하시요.
+
+select ename,sal,hiredate
+from emp;
+
+문3) emp테이블에서 사원이름과 급여와커미션을 합산하여 출력하기.
+
+select ename, sal+comm
+from emp; 
+(심각)
+
+
+문4) 사원이름과 연봉을 출력하기 
+select ename,sal*12
+from emp;
+
+select ename,sal*12  as 연봉
+from emp;
+
+
+문6) 중복 컬럼을 한번씩만 보여주기 
+       부서
+select deptno 
+from emp;
+
+select distinct deptno
+from emp;
+
+문7) 부서번호가 10인 데이터만 추출하되, 모든칼럼 출력하시요.
+
+select * 
+from emp
+where deptno=10;
+
+
+문8) sal 이 2000 이상인 데이터만 출력하되,
+     이름과 급여만 출력하시요 
+
+select ename,sal
+from emp
+where sal>=2000;
+
+03_오라클.rtf
+
+2021_05_20일
+
+문9) 이름이 FORD 인 사람의 사원번호 와 이름을 출력하시요.
+
+SELECT empno,ename
+FROM emp
+WHERE ename='FORD';
+
+
+문10) 중요 ★★★★★★★★
+      1982/01/01 이후에 입사한 사람만 추출하시요.
+      이름과 입사일만 출력하되, 입사일 내림차순으로 출력하시오 .
+--------------------------------------------
+select ename,hiredate
+from emp
+where hiredate>'1982/01/01'
+order by hiredate desc;
+--------------------------------------------
+select ename,hiredate
+from emp
+where hiredate>'1982-01-01'
+order by hiredate desc;
+--------------------------------------------
+
+문 11) 이름에 'A'가 포함된 사람만 추출하시요.
+       이름과 부서만 출력 하시요 .
+
+형식 ) 
+select 필드명,,, 
+from table이름 
+where 필드명 like '%서울%';
+
+SELECT ename,deptno
+FROM emp
+WHERE ename like '%A%';
+
+
+■문12) or 연산   (자바 || )
+      커미션이 300 또는 500 또는 1400인 사람만 추출하시요.
+      사원번호, 사원이름, 커미션 을 출력 하시오.
+
+select empno,ename,comm
+from emp
+where comm=300 or comm=500 or comm=1400;
+
+
+■문 13 ) and 연산 (자바 &&)
+        sal이 500과 1400 사이에 있는 사람만 검색 하시요.
+        empno, ename, sal을 출력하시오.
+
+select empno,ename,sal
+from emp
+where sal>=500 and sal<=1400;
+
+
+select empno,ename,sal
+from emp
+where sal between 500 and 1400;
+
+문14) and 연산
+      직급이 사무원(CLERK)이고, 
+     부서가 10번인 자료를 검색하되,
+      empno, ename,job,deptno를 출력하시오.
+
+select empno,ename,job,deptno
+from emp
+where job='CLERK' and deptno=10;
+
+
+문15) ename에 A 가 포함이 되지 않은 자료를 검색하시요.
+         empno,ename만 출력 하시오.
+
+select empno,ename
+from emp
+where ename not like '%A%';
+
+문16) 급여가 500과 1400 사이가 아닌것을 추출하되
+       ename,empno,deptno,sal 을 출력하시오.
+
+select ename,empno,deptno,sal
+from emp
+where sal not between 500 and 1400;
+
+■ 정렬 : order by 키필드 asc | desc
+    asc : 오름차순(생략가능)
+    desc : 내림차순
+
+
+문17) sal(급여)를 오름차순으로 정렬하되,
+      ename, empno,sal출력 하시오.
+
+select ename,empno,sal
+from emp
+order by sal asc;
+
+select ename,empno,sal
+from emp
+order by sal desc;
+
+문 18) ename을 오름차순으로 정렬하되,
+       ename,empno 출력 하시오.
+
+select ename,empno
+from emp
+order by ename asc;
+
+
+문 19) 입사일을 내림차순으로 정렬하되,
+       ename,hiredate 출력 하시오.
+
+select ename,hiredate
+from emp
+order by hiredate desc;
+----------------------------------------
+
+문 20) 부서번호를 오름차순으로, 
+        사원번호를 내림차순으로 정렬하되,
+      ename,deptno,empno 출력하시오.
+
+select ename,deptno,empno
+from emp
+order by deptno asc, empno desc;
+---------------------------------------------
+
+
