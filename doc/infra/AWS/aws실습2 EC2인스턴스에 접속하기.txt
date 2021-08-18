@@ -1,0 +1,28 @@
+1.다운로드한 pem파일은 putty에서 바로 사용할 수 없기때문에 putty key generator로 변환해야합니다
+puttygen.exe 파일을 실행하고 conversion-import key를 선택합니다.
+
+2.파일열기 창에서 EC2인스턴스를 생성 할 때 다운로드한 키쌍파일을 선택하고 열기버튼을 클릭합니다.
+pem파일이 로드되어 표시되면 화면 하단의 save private key 단추를 클릭합니다. 이때 생성된 개인키 파일을 비밀번호없이 저장할지 물어보는데 예(y)단추를 눌러 비밀번호없이 저장합니다.
+적당한 ppk 파일이름(awskeypair)을 입력하고 저장단추를 클릭합니다.
+
+3,AWS관리콘솔화면에서 생성한 Sample server를 선택하면 화면아래부분에 IPv4 퍼블릭 IP 부분이 보입니다.이것이 EC2인스턴스의 공인IP입니다.
+
+
+4.putty.exe를 실행하고 Host Name에 접속할 EC2인스턴스의 공인IP를 입력합니다.
+
+5.왼쪽 Catagory에서 SSH-Auth를 클릭하고 Browse..버튼을 클릭합니다.
+
+6.파일열기 창에서 Putty Key Generator로 생성한 ppk파일을 선택하고 열기 버튼을 클릭합니다.
+
+7.Open버튼을 클릭하여 EC2인스턴스(sample server)에 접속합니다.
+
+8.서버를 신뢰하겠는지의 여부를 묻는 경고 창이 표시됩니다.예(y)를 클릭합니다.
+
+9.서버접속 후 login as에 ec2-user를 입력하고 엔터키를 치면 로그인이 완료됩니다.  
+
+참고로 EC2인스턴스 OS 유형별로 기본사용자이름이 다릅니다.
+amazon linux:ec2-user
+RedHat Enterprise:ec2-user
+Suse:root:root
+Ubuntu:ubuntu 
+
