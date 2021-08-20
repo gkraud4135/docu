@@ -1,0 +1,21 @@
+mkdir -p /usr/local/docker/tomcat
+cd /usr/local/docker/tomcat
+
+--------------------------myDockerfile
+
+FROM openjdk:8-jdk
+MAINTAINER gunsmoke1992
+
+WORKDIR /usr/local
+RUN apt-get update -y
+RUN apt-get install wget
+
+RUN wget https://mirror.navercorp.com/apache/tomcat/tomcat-8/v8.5.70/bin/apache-tomcat-8.5.70.tar.gz
+RUN tar -xvzf apache-tomcat-8.5.70.tar.gz
+RUN mv apache-tomcat-8.5.70 tomcat8
+
+WORKDIR /usr/local/tomcat8
+
+EXPOSE 8080
+
+ENTRYPOINT ["./bin/catalina.sh", "run"]
