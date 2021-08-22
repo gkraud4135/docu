@@ -80,6 +80,10 @@ select *from board LEFT JOIN friend ON board.writer = friend.my_sn join state on
 
 select count(*) from board LEFT JOIN friend ON board.writer = friend.my_sn join state on friend.friend_sn=state.sn where friend.friend_sn=3 and (board.state='전체' or board.state='친구') and wdate>lastviewtime order by wdate desc limit 3;
 
+select distinct chatroom_id from chatting where writer = 3;
+select distinct writer from chatting where chatroom_id = "09a0cb11-f51a-420f-9da3-7201f578c2a7" and writer != 3;
+
+
 
 
 
