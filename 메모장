@@ -3,7 +3,7 @@
 ----환경설정----
 자바 8
 STS 3.9 or 4이상    xml,   컨트롤러-서비스-맵퍼
-깃                         이게 정말 고민..
+깃                         이게 정말 고민   https://jcdgods.tistory.com/473
 톰캣  8.5
 oracle 11g or 22c  ....       일단 회사에서는 Toad쓰는데 oracle developer가 편할듯?
 mybatis 
