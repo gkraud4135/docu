@@ -1,0 +1,5 @@
+임포트 - Maven
+톰캣 Configurations - Tomcat Server - Local - JRE(java-version~)
+패키지(library) File - Libraries - (+) - JAVA - 기존 파일 lib folder
+오라클 Name, HOST, SID, USER, PASSWORD - test(after install)
+
