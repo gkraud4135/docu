@@ -10,11 +10,11 @@ mybatis
 linux   --일단 linux배포 하다가 괜찮으면 유료호스팅+도메인
 
 1. https://itrh.tistory.com/50
-자바 - 파이썬 json소켓활용 데이터 api
+자바(Client) - 파이썬(Server) json 소켓활용 데이터 api
 2. https://www.google.com/search?q=sheel+%ED%8C%8C%EC%9D%B4%EC%8D%AC+%EC%8B%A4%ED%96%89&biw=1280&bih=609&ei=niK_YdLFGMuB-QbCsZvQDA&ved=0ahUKEwjSjPbv6-_0AhXLQN4KHcLYBsoQ4dUDCA4&uact=5&oq=sheel+%ED%8C%8C%EC%9D%B4%EC%8D%AC+%EC%8B%A4%ED%96%89&gs_lcp=Cgdnd3Mtd2l6EAMyCAgAEAgQDRAeMggIABAIEA0QHjIICAAQCBANEB46BQgAEIAEOgsIABCABBCxAxCDAToLCC4QgAQQsQMQgwE6CAguEIAEELEDOg4ILhCABBCxAxDHARCjAjoICAAQgAQQsQM6BAgAEEM6BwgAEIAEEAo6BwgAELEDEEM6CggAELEDEIMBEEM6BwguELEDEEM6BAgAEAo6BAgAEA06CAgAEA0QBRAeSgQIQRgASgQIRhgAUABY7iVg1iZoBnAAeASAAbQBiAHJF5IBBDAuMjSYAQCgAQGwAQDAAQE&sclient=gws-wiz
 shell활용하여 py파일 실행
 
-1번은 크롤링 후 데이터를 직접 전송받는 방식
+1번은 크롤링 후 데이터를 직접 전송받는 방식 (어려움)
 2번은 크롤링 후 데이터가 저장되고 그 데이터를 사용하는 방식
 
 
