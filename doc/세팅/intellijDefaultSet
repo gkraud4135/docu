@@ -1,5 +1,7 @@
-임포트 - Maven
-톰캣 Configurations - Tomcat Server - Local - JRE(java-version~)
-패키지(library) File - Libraries - (+) - JAVA - 기존 파일 lib folder // File - project Structure - Libraries - lib(폴더찾기)
+임포트 - Maven  ( File - open - 프로젝트) 후 메이븐 업데이트
+톰캣 Configurations - Tomcat Server - Local - JRE(java-version~)   // URL, Deployment - Application context rink 설정
+라이브러리 - File - project Structure - Libraries - lib(폴더찾기)   // 라이브러리 추가시 pom.xml 추가후 메이븐업데이트 & 톰켓에도 추가
 오라클 Name, HOST, SID, USER, PASSWORD - test(after install)
 
+
+#참고 https://hhjeong.tistory.com/176
